@@ -1,0 +1,54 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "Run Sanity Tests",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "test:sanity"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart",
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+
+        {
+            "name": "Run Smoke Tests",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "test:smoke"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart",
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+
+        {
+            "name": "Run Regression Tests",
+            "request": "launch",
+            "runtimeArgs": [
+                "run",
+                "test:regression"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "openOnSessionStart",
+            "runtimeExecutable": "npm",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        }
+
+    ]
+}
