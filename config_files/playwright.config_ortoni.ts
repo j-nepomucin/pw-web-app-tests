@@ -4,12 +4,12 @@ import * as os from "os";
 
 const reportConfig: OrtoniReportConfig = {
   open: process.env.CI ? "never" : "always",
-  folderPath: "ortoni-report",
+  folderPath: "ortoni-report/regression",
   filename: "index.html",
-  title: "Sanity+Smoke+Regression Test Report",
+  title: "Regression Test Report",
   showProject: false,
   projectName: "QA Practice Web App",
-  testType: "Sanity+Smoke+Regression Test",
+  testType: "Regression Test",
   authorName: os.userInfo().username,
   base64Image: false,
   stdIO: true,

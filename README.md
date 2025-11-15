@@ -94,7 +94,6 @@ These are the directory paths of result files:
     └── regression/     # regression tests are executed using ortini report generator
 ```
 
-
 ## Configuration
 
 Test configuration can be found in `playwright.config.ts`.
@@ -115,3 +114,20 @@ Test configuration can be found in `playwright.config.ts`.
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - [VS Code Documentation](https://code.visualstudio.com/docs/setup/setup-overview)
 - [Ortini Report](https://www.npmjs.com/package/ortoni-report?activeTab=readme)
+
+### Sample Regression Test Results (Ortoni Report)
+[Dashboard]()
+
+<img src="images/regression_dashboard_ortoni_report.png" width="990">
+
+[Test Listing]()
+
+<img src="images/regression_tests_ortoni_report.png" width="990">
+
+[Glance]()
+
+<img src="images/regression_at_a_glance_ortoni_report.png" width="990">
+
+[Analytics]()
+
+<img src="images/regression_test_analytics_ortoni_report.png" width="990">

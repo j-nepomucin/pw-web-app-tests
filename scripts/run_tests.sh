@@ -1,6 +1,6 @@
 #!/bin/bash
 # Script to run Playwright tests with configurable options
-# Usage: ./run_tests.sh [--headless|--headed] [--suite <test-suite>] [--type <test-type>] [--project <project-name>] [--workers <num-workers>]
+# Usage: ./run_tests.sh [--headless|--headed] [--suite <test-suite>] [--type <test-type>] [--project <project-name>] [--workers <num-workers>] [--ortoni-report]
 
 # Default values
 HEADLESS=true
