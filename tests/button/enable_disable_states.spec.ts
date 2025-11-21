@@ -46,6 +46,16 @@ enum BtnState {
 }
 
 
+test.beforeEach(async ({ }, testInfo) => {
+    console.log(`Starting test: ${testInfo.title}`);
+});
+
+
+test.afterEach(async ({ }, testInfo) => {
+    console.log(`Finished test: ${testInfo.title} [${testInfo.status}]`);
+});
+
+
 async function disable_submit_btn(page: Page): Promise<Locator> {
     let btn_selector = page.locator(LOCATOR_SELECT_STATE);
     await btn_selector.selectOption('disabled');
@@ -86,6 +96,7 @@ async function disable_enable_disable_submit_btn(page: Page, expected_msg: strin
 }
 
 
+// --- Submit Button State Tests ---
 [
     {   t_case: BtnState.Disabled, 
         t_type: [TestType.Sanity, TestType.Smoke, TestType.Regression],

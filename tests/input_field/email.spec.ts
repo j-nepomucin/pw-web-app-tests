@@ -51,6 +51,18 @@ const TXT_MSG_INVALID = 'Enter a valid email address.';
 const TXT_MSG_MANDATORY = 'Please fill out this field.';
 const TXT_MSG_MANDATORY_WEBKIT = 'Fill out this field';
 
+
+test.beforeEach(async ({ }, testInfo) => {
+    console.log(`Starting test: ${testInfo.title}`);
+});
+
+
+test.afterEach(async ({ }, testInfo) => {
+    console.log(`Finished test: ${testInfo.title} [${testInfo.status}]`);
+}); 
+
+
+// --- Email Input Field Tests ---
 [
     {   t_case: 'Valid email - normal characters', 
         t_type: [TestType.Sanity, TestType.Smoke, TestType.Regression],
@@ -151,7 +163,6 @@ const TXT_MSG_MANDATORY_WEBKIT = 'Fill out this field';
         is_valid: false, 
         result_msg: TXT_MSG_INVALID
     },
-
     
 ].forEach(({ t_case, t_type, email_address, is_valid, result_msg }) => {    
     test('Email address input : ' + t_case, { tag: [ getTestType(t_type) ] }, async ({ page, browserName }) => {

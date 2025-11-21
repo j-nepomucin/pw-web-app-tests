@@ -46,6 +46,18 @@ const TXT_MSG_INVALID = 'Low password complexity';
 const TXT_MSG_MANDATORY = 'Please fill out this field.';
 const TXT_MSG_MANDATORY_WEBKIT = 'Fill out this field';
 
+
+test.beforeEach(async ({ }, testInfo) => {
+    console.log(`Starting test: ${testInfo.title}`);
+});
+
+
+test.afterEach(async ({ }, testInfo) => {
+    console.log(`Finished test: ${testInfo.title} [${testInfo.status}]`);
+});
+
+
+// --- Password Input Tests ---
 [
     {   t_case: 'Valid password - short 8 chars only', 
         t_type: [TestType.Sanity, TestType.Smoke, TestType.Regression],

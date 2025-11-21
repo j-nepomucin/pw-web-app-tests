@@ -48,6 +48,17 @@ const LOCATOR_DROP_BOX_TXT = '#text-droppable';
 const X_OFFSET = 10;
 
 
+test.beforeEach(async ({ }, testInfo) => {
+    console.log(`Starting test: ${testInfo.title}`);
+});
+
+
+test.afterEach(async ({ }, testInfo) => {
+    console.log(`Finished test: ${testInfo.title} [${testInfo.status}]`);
+}); 
+
+
+// --- Drag and Drop Box Tests ---
 [
     {   t_case: 'Drag-me inside Drop-here', 
         t_type: [TestType.Sanity, TestType.Smoke, TestType.Regression],

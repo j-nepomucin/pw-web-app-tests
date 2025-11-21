@@ -41,6 +41,7 @@ const RESULT_TXT_CANCEL = 'You canceled the prompt';
 
 let click_btn: Locator;
 
+
 test.beforeEach(async ({ page }, testInfo) => {
 
     click_btn = page.locator(LOCATOR_CLICK_BTN_STR);
@@ -72,6 +73,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 
+// --- Alert Prompt Tests ---
 [
 
     {   t_case: 'Ok - with prompt input', 

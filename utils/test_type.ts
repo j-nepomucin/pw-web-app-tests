@@ -1,3 +1,4 @@
+// Defines different types of tests for categorization purposes.
 export enum TestType {
     Sanity = 'sanity',
     Smoke = 'smoke',

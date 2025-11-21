@@ -45,6 +45,17 @@ const RECT_BOX_2 = '#rect-droppable2';
 const X_OFFSET = 10;
 
 
+test.beforeEach(async ({ }, testInfo) => {
+    console.log(`Starting test: ${testInfo.title}`);
+});
+
+
+test.afterEach(async ({ }, testInfo) => {
+    console.log(`Finished test: ${testInfo.title} [${testInfo.status}]`);
+});
+
+
+// --- Drag and Drop Image Tests ---
 [
     // Positive test cases
     {   t_case: 'From Box_1->Box_2', 

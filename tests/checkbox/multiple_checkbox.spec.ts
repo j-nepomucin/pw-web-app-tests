@@ -48,6 +48,7 @@ let checkbox_2: Locator;
 let checkbox_3: Locator;
 let submit_btn: Locator;
 
+
 test.beforeEach(async ({ page }, testInfo) => {
     checkbox_1 = page.locator(LOCATOR_CHKBOX_STR).nth(0);
     checkbox_2 = page.locator(LOCATOR_CHKBOX_STR).nth(1);
@@ -83,6 +84,7 @@ test.beforeEach(async ({ page }, testInfo) => {
 
 });
 
+
 test.afterEach(async ({ page }, testInfo) => {
     checkbox_1 = page.locator(LOCATOR_CHKBOX_STR).nth(0);
     checkbox_2 = page.locator(LOCATOR_CHKBOX_STR).nth(1);
@@ -103,11 +105,7 @@ test.afterEach(async ({ page }, testInfo) => {
 });
 
 
-test.afterAll(async () => {
-    console.log('All checkbox tests finished.');
-});
-
-
+// --- Checkbox Tests ---
 [
     {   t_case: 'Select none', 
         t_type: [TestType.Sanity, TestType.Smoke, TestType.Regression],
