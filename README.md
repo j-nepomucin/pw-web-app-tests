@@ -75,18 +75,26 @@ There are 3 ways you can run these tests:
 
 
 ## Viewing Test Reports
-
+In this project, 3 ways of reporting were explored to demonstrate the flexibility of playwright results. QA test automation Engineer has the freedom whichever reporting tool to use.
 ```bash
 # View HTML report using native Playwright HTML report generator
 npx playwright show-report
 
 # View HTML report using Ortini Report
 npx ortoni-report show-report
+
+# View HTML report using Allure
+Make sure in palywright.config.ts reporter includes 'allure-playwright'
+npx allure generate ./allure-results --clean   
+npx allure open ./allure-report
 ```
 **Report Directory Structure**
 
 These are the directory paths of result files:
 ```
+├── allure-report/      # HTML generated reports from allure-result
+├── allure-result/      # test results intended for allure
+├── playwright-report/  # native Playwright HTML report generator
 ├── playwright-report/  # native Playwright HTML report generator
 ├── ortini-report/      # all test types are executed using ortini report generator
     ├── sanity/         # sanity tests are executed using ortini report generator
@@ -114,6 +122,16 @@ Test configuration can be found in `playwright.config.ts`.
 - [TypeScript Documentation](https://www.typescriptlang.org/docs/)
 - [VS Code Documentation](https://code.visualstudio.com/docs/setup/setup-overview)
 - [Ortini Report](https://www.npmjs.com/package/ortoni-report?activeTab=readme)
+
+### Sample Allure Test Report
+[Test Overview]()
+
+<img src="images/allure_report_sample_overview.png" width="495">
+
+[Test Suites]()
+
+<img src="images/allure_report_sample_suites.png" width="990">
+
 
 ### Sample Regression Test Results (Ortoni Report)
 [Dashboard]()

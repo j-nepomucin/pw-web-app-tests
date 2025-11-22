@@ -9,3 +9,7 @@ node_modules/
 
 # Ortoni Report
 /ortoni-report/  
+
+# Allure Report
+/allure-report/
+/allure-results/
